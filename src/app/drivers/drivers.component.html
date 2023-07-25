@@ -1,0 +1,11 @@
+<p-panel header="Drivers">
+    <ng-template pTemplate="icons">
+        <button [pTooltip]="'Add new Driver'" (click)="addDriver()" pButton pRipple type="button" icon="pi pi-plus"
+            class="p-panel-header-icon p-button-rounded p-button-text">
+        </button>
+    </ng-template>
+    <app-new-driver (onSaveEvent)="onSaveNewDriver($event)"></app-new-driver>
+    <app-driver-list [drivers]="drivers_list" 
+         (deleteDriverEvent)="onDeleteDriver($event)"></app-driver-list>
+</p-panel>
+

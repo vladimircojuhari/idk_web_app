@@ -1,0 +1,35 @@
+<div class="col-12 p-fluid flex">
+    <div class="col-6">
+        <div class="field">
+            <label>Name</label>
+            <input pInputText type="text" [(ngModel)]="route.name"/>
+        </div>
+
+        <div class="field">
+            <label>Driver</label>
+            <p-dropdown [options]="drivers" [(ngModel)]="route.driver_id" optionValue="_id" optionLabel="first_name"></p-dropdown>
+        </div>
+        <div class="field">
+            <label>Start Date</label>
+            <p-calendar [showIcon]="true" [(ngModel)]="route.start_date"></p-calendar>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="field">
+            <label>Origin Address</label>
+            <input pInputText type="text" [(ngModel)]="route.origin_address"/>
+        </div>
+        <div class="field">
+            <label>Destination Address</label>
+            <input pInputText type="text" [(ngModel)]="route.destination_address"/>
+        </div>
+        
+        <div class="field">
+            <label>End Date</label>
+            <p-calendar [showIcon]="true" [(ngModel)]="route.end_date"></p-calendar>
+        </div>
+    </div>
+</div>
+<div class="col-12">
+    <p-button (click)="save()">Save</p-button>
+</div>

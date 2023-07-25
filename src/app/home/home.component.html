@@ -1,0 +1,14 @@
+<div class="card">
+    <div class="card">
+        Map
+    </div>
+    <div class="grid">
+
+        <agm-map *ngIf="mapInited" [latitude]="options.center.lat" [longitude]="options.center.lng">
+            <agm-polyline  [strokeColor]="'red'" [strokeWeight]="10">
+                <agm-polyline-point *ngFor="let point of points" [latitude]="point.lat" [longitude]="point.lng">
+
+                </agm-polyline-point>
+            </agm-polyline>
+        </agm-map>
+    </div>

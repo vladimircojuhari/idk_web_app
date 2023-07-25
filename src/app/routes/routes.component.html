@@ -1,0 +1,9 @@
+<p-panel [header]="'New route'">
+    <app-new-route (saveRouteEvt)="saveRoute($event)"></app-new-route>
+</p-panel>
+
+<br>
+
+<p-panel [header]="'Existing routes'">
+    <app-routes-list></app-routes-list>
+</p-panel>

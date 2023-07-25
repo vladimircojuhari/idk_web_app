@@ -1,0 +1,29 @@
+    <div class="col-12 p-fluid flex">
+        <div class="col-6">
+            <div class="field">
+                <label>First Name</label>
+                <input pInputText type="text" [(ngModel)]="driver.first_name"/>
+            </div>
+            <div class="field">
+                <label>Last Name</label>
+                <input pInputText type="text" [(ngModel)]="driver.last_name"/>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="field">
+                <label>Login</label>
+                <input pInputText type="text" [(ngModel)]="driver.pin"/>
+            </div>
+            <div class="field">
+                <label>Password</label>
+                <input pInputText type="text" [(ngModel)]="driver.password"/>
+            </div>
+            <div class="field">
+                <label>Phone</label>
+                <input pInputText type="text" [(ngModel)]="driver.phone"/>
+            </div>
+        </div>
+    </div>
+    <div class="col-12">
+        <p-button (click)="save()">Save</p-button>
+    </div>
